@@ -147,9 +147,11 @@ const showSocials = keyframes`
 export const Container = styled.div`
   display: grid;
   visibility: hidden;
-  animation:
-    ${showContainer} 0s linear 1.25s forwards,
-    ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 4.15s forwards;
+  @media all and (-webkit-min-device-pixel-ratio: 0) {
+    animation:
+      ${showContainer} 0s linear 1.25s forwards,
+      ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 4.15s forwards;
+  }
   position: relative;
   align-items: center;
   justify-items: center;
@@ -162,69 +164,88 @@ export const Items = styled.svg`
   height: calc(0.65 * ${elementHeight});
 
   path {
-    animation:
-      ${changeColor} 0s forwards 3.25s,
-      ${changeLogoColor} 0.2s linear 4.25s forwards;
+    @media all and (-webkit-min-device-pixel-ratio: 0) {
+      animation:
+        ${changeColor} 0s forwards 3.25s,
+        ${changeLogoColor} 0.2s linear 4.25s forwards;
+    }
   }
-
   &:nth-child(1) {
     transform: rotate(-135deg);
-    animation:
-      ${rotate03} 1.25s linear 1.25s,
-      ${moveRightDown} 0.8s ease-in 2.5s forwards,
-      ${hideM} 0s linear 3.25s forwards;
+    @media all and (-webkit-min-device-pixel-ratio: 0) {
+      animation:
+        ${rotate03} 1.25s linear 1.25s,
+        ${moveRightDown} 0.8s ease-in 2.5s forwards,
+        ${hideM} 0s linear 3.25s forwards;
+    }
   }
   &:nth-child(2) {
     transform: rotate(135deg);
-    animation:
-      ${rotate01} 1.25s linear 1.25s,
-      ${moveDown} 0.8s ease-in 2.5s forwards,
-      ${hideM} 0s linear 3.25s forwards;
+    @media all and (-webkit-min-device-pixel-ratio: 0) {
+      animation:
+        ${rotate01} 1.25s linear 1.25s,
+        ${moveDown} 0.8s ease-in 2.5s forwards,
+        ${hideM} 0s linear 3.25s forwards;
+    }
   }
   &:nth-child(3) {
     transform: rotate(-135deg);
-    animation:
-      ${rotate03} 1.25s linear 1.25s,
-      ${moveLeftDown} 0.8s ease-in 2.5s forwards,
-      ${hideM} 0s linear 3.25s forwards;
+    @media all and (-webkit-min-device-pixel-ratio: 0) {
+      animation:
+        ${rotate03} 1.25s linear 1.25s,
+        ${moveLeftDown} 0.8s ease-in 2.5s forwards,
+        ${hideM} 0s linear 3.25s forwards;
+    }
   }
   &:nth-child(4) {
     transform: rotate(-90deg);
-    animation:
-      ${rotate02} 1.25s linear 1.25s,
-      ${moveRight} 0.8s ease-in 2.5s forwards,
-      ${hideM} 0s linear 3.25s forwards;
+    @media all and (-webkit-min-device-pixel-ratio: 0) {
+      animation:
+        ${rotate02} 1.25s linear 1.25s,
+        ${moveRight} 0.8s ease-in 2.5s forwards,
+        ${hideM} 0s linear 3.25s forwards;
+    }
   }
   &:nth-child(5) {
-    animation: ${alignLogo} 0.75s linear 3.25s forwards;
+    @media all and (-webkit-min-device-pixel-ratio: 0) {
+      animation: ${alignLogo} 0.75s linear 3.25s forwards;
+    }
   }
   &:nth-child(6) {
     transform: rotate(-90deg);
-    animation:
-      ${rotate02} 1.25s linear 1.25s,
-      ${moveLeft} 0.8s ease-in 2.5s forwards,
-      ${hideM} 0s linear 3.25s forwards;
+    @media all and (-webkit-min-device-pixel-ratio: 0) {
+      animation:
+        ${rotate02} 1.25s linear 1.25s,
+        ${moveLeft} 0.8s ease-in 2.5s forwards,
+        ${hideM} 0s linear 3.25s forwards;
+    }
   }
   &:nth-child(7) {
     transform: rotate(-135deg);
-    animation:
-      ${rotate03} 1.25s linear 1.25s,
-      ${moveRightUp} 0.8s ease-in 2.5s forwards,
-      ${hideM} 0s linear 3.25s forwards;
+    @media all and (-webkit-min-device-pixel-ratio: 0) {
+      animation:
+        ${rotate03} 1.25s linear 1.25s,
+        ${moveRightUp} 0.8s ease-in 2.5s forwards,
+        ${hideM} 0s linear 3.25s forwards;
+    }
   }
   &:nth-child(8) {
     transform: rotate(135deg);
-    animation:
-      ${rotate01} 1.25s linear 1.25s,
-      ${moveUp} 0.8s ease-in 2.5s forwards,
-      ${hideM} 0s linear 3.25s forwards;
+    @media all and (-webkit-min-device-pixel-ratio: 0) {
+      animation:
+        ${rotate01} 1.25s linear 1.25s,
+        ${moveUp} 0.8s ease-in 2.5s forwards,
+        ${hideM} 0s linear 3.25s forwards;
+    }
   }
   &:nth-child(9) {
     transform: rotate(-135deg);
-    animation:
-      ${rotate03} 1.25s linear 1.25s,
-      ${moveLeftUp} 0.8s ease-in 2.5s forwards,
-      ${hideM} 0s linear 3.25s forwards;
+    @media all and (-webkit-min-device-pixel-ratio: 0) {
+      animation:
+        ${rotate03} 1.25s linear 1.25s,
+        ${moveLeftUp} 0.8s ease-in 2.5s forwards,
+        ${hideM} 0s linear 3.25s forwards;
+    }
   }
 `
 
@@ -234,10 +255,13 @@ export const Arquitetura30 = styled.svg`
   position: absolute;
   visibility: hidden;
   height: calc(0.819 * ${elementHeight});
-  animation: ${show30arquitetura} 0s linear 3.25s forwards;
-
+  @media all and (-webkit-min-device-pixel-ratio: 0) {
+    animation: ${show30arquitetura} 0s linear 3.25s forwards;
+  }
   path {
-    animation: ${changeLogoColor} 0.2s linear 4.25s forwards;
+    @media all and (-webkit-min-device-pixel-ratio: 0) {
+      animation: ${changeLogoColor} 0.2s linear 4.25s forwards;
+    }
   }
 `
 
@@ -262,7 +286,9 @@ export const Msg = styled.p`
   position: absolute;
   text-align: center;
   top: calc(50% - 15px);
-  animation: ${showSocials} 0s linear 4.5s forwards;
+  @media all and (-webkit-min-device-pixel-ratio: 0) {
+    animation: ${showSocials} 0s linear 4.5s forwards;
+  }
 `
 
 export const Footer = styled.footer`
@@ -275,15 +301,17 @@ export const Footer = styled.footer`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  animation: ${showSocials} 0s linear 4.25s forwards;
+  @media all and (-webkit-min-device-pixel-ratio: 0) {
+    animation: ${showSocials} 0s linear 4.25s forwards;
+  }
 `
 
 export const Socials = styled.div`
   gap: 25px;
   display: flex;
   flex-direction: row;
-  
-  a svg{
+
+  a svg {
     display: flex;
     color: #1d1d1f;
     cursor: pointer;
@@ -301,10 +329,13 @@ export const Span = styled.span`
 `
 
 export const Brackground = styled.div`
-  animation: ${changeBackground} 1s cubic-bezier(0.77, 0, 0.175, 1) 4s forwards;
-  position: absolute;
   width: 100%;
   height: 100%;
+  position: absolute;
   background: #f3f3f3;
   clip-path: inset(100% 0 0 0);
+  @media all and (-webkit-min-device-pixel-ratio: 0) {
+    animation: ${changeBackground} 1s cubic-bezier(0.77, 0, 0.175, 1) 4s
+      forwards;
+  }
 `
