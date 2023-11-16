@@ -148,9 +148,9 @@ export const Container = styled.div`
   display: grid;
   visibility: hidden;
   @media all and (-webkit-min-device-pixel-ratio: 0) {
-    animation:
-      ${showContainer} 0s linear 1.25s forwards,
-      ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 4.15s forwards;
+  animation:
+    ${showContainer} 0s linear 1.25s forwards,
+    ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 4.15s forwards;
   }
   position: relative;
   align-items: center;
