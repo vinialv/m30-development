@@ -5,95 +5,95 @@ const elementHeight = '100px'
 // Animações para rotação do elemento
 const rotate01 = keyframes`
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
   }
 `
 const rotate02 = keyframes`
   to {
-    transform: rotate(360deg)
+    -webkit-transform: rotate(360deg)
   }
 `
 const rotate03 = keyframes`
   to {
-    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
   }
 `
 
 // Animações para movimentar o elemento ao centro da GRID
 const moveRightDown = keyframes`
   from {
-    transform: translateX(0) translateY(0);
+    -webkit-transform: translateX(0) translateY(0);
   }
   to {
-    transform: translateX(${elementHeight}) translateY(${elementHeight});
+    -webkit-transform: translateX(${elementHeight}) translateY(${elementHeight});
   }
 `
 const moveRightUp = keyframes`
   from {
-    transform: translateX(0) translateY(0);
+    -webkit-transform: translateX(0) translateY(0);
   }
   to {
-    transform: translateX(${elementHeight}) translateY(-${elementHeight});
+    -webkit-transform: translateX(${elementHeight}) translateY(-${elementHeight});
   }
 `
 const moveRight = keyframes`
   from {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
   to {
-    transform: translateX(${elementHeight});
+    -webkit-transform: translateX(${elementHeight});
   }
 `
 
 const moveLeftDown = keyframes`
   from {
-    transform: translateX(0) translateY(0);
+    -webkit-transform: translateX(0) translateY(0);
   }
   to {
-    transform: translateX(-${elementHeight}) translateY(${elementHeight});
+    -webkit-transform: translateX(-${elementHeight}) translateY(${elementHeight});
   }
 `
 const moveLeftUp = keyframes`
   from {
-    transform: translateX(0) translateY(0);
+    -webkit-transform: translateX(0) translateY(0);
   }
   to {
-    transform: translateX(-${elementHeight}) translateY(-${elementHeight});
+    -webkit-transform: translateX(-${elementHeight}) translateY(-${elementHeight});
   }
 `
 const moveLeft = keyframes`
   from {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
   to {
-    transform: translateX(-${elementHeight});
+    -webkit-transform: translateX(-${elementHeight});
   }
 `
 
 const moveDown = keyframes`
   from {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
   }
   to {
-    transform: translateY(${elementHeight});
+    -webkit-transform: translateY(${elementHeight});
   }
 `
 const moveUp = keyframes`
   from {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
   }
   to {
-    transform: translateY(-${elementHeight});
+    -webkit-transform: translateY(-${elementHeight});
   }
 `
 
 // Animação para alinhar o "M" para entrar o "30" e ambos ficarem alinhado ao centro
 const alignLogo = keyframes`
   from {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
   to {
-    transform: translateX(calc(0.44 * -${parseInt(elementHeight)}px));
+    -webkit-transform: translateX(calc(0.44 * -${parseInt(elementHeight)}px));
   }
 `
 const hideM = keyframes`
@@ -132,10 +132,10 @@ const changeLogoColor = keyframes`
 
 const moveUpLogo = keyframes`
   from {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
   }
   to {
-    transform: translateY(calc(-40dvh));
+    -webkit-transform: translateY(calc(-40dvh));
   }
 `
 const showSocials = keyframes`
@@ -148,7 +148,7 @@ export const Container = styled.div`
   display: grid;
   visibility: hidden;
   @media all and (-webkit-min-device-pixel-ratio: 0) {
-    animation:
+    -webkit-animation:
       ${showContainer} 0s linear 1.25s forwards,
       ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 4.15s forwards;
   }
@@ -165,15 +165,15 @@ export const Items = styled.svg`
 
   path {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      animation:
+      -webkit-animation:
         ${changeColor} 0s forwards 3.25s,
         ${changeLogoColor} 0.2s linear 4.25s forwards;
     }
   }
   &:nth-child(1) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(-135deg);
-      animation:
+      -webkit-transform: rotate(-135deg);
+      -webkit-animation:
         ${rotate03} 1.25s linear 1.25s,
         ${moveRightDown} 0.8s ease-in 2.5s forwards,
         ${hideM} 0s linear 3.25s forwards;
@@ -181,8 +181,8 @@ export const Items = styled.svg`
   }
   &:nth-child(2) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(135deg);
-      animation:
+      -webkit-transform: rotate(135deg);
+      -webkit-animation:
         ${rotate01} 1.25s linear 1.25s,
         ${moveDown} 0.8s ease-in 2.5s forwards,
         ${hideM} 0s linear 3.25s forwards;
@@ -190,8 +190,8 @@ export const Items = styled.svg`
   }
   &:nth-child(3) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(-135deg);
-      animation:
+      -webkit-transform: rotate(-135deg);
+      -webkit-animation:
         ${rotate03} 1.25s linear 1.25s,
         ${moveLeftDown} 0.8s ease-in 2.5s forwards,
         ${hideM} 0s linear 3.25s forwards;
@@ -199,8 +199,8 @@ export const Items = styled.svg`
   }
   &:nth-child(4) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(-90deg);
-      animation:
+      -webkit-transform: rotate(-90deg);
+      -webkit-animation:
         ${rotate02} 1.25s linear 1.25s,
         ${moveRight} 0.8s ease-in 2.5s forwards,
         ${hideM} 0s linear 3.25s forwards;
@@ -208,14 +208,14 @@ export const Items = styled.svg`
   }
   &:nth-child(5) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      animation:
+      -webkit-animation:
         ${alignLogo} 0.75s linear 3.25s forwards;
     }
   }
   &:nth-child(6) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(-90deg);
-      animation:
+      -webkit-transform: rotate(-90deg);
+      -webkit-animation:
         ${rotate02} 1.25s linear 1.25s,
         ${moveLeft} 0.8s ease-in 2.5s forwards,
         ${hideM} 0s linear 3.25s forwards;
@@ -223,8 +223,8 @@ export const Items = styled.svg`
   }
   &:nth-child(7) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(-135deg);
-      animation:
+      -webkit-transform: rotate(-135deg);
+      -webkit-animation:
         ${rotate03} 1.25s linear 1.25s,
         ${moveRightUp} 0.8s ease-in 2.5s forwards,
         ${hideM} 0s linear 3.25s forwards;
@@ -232,8 +232,8 @@ export const Items = styled.svg`
   }
   &:nth-child(8) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(135deg);
-      animation:
+      -webkit-transform: rotate(135deg);
+      -webkit-animation:
         ${rotate01} 1.25s linear 1.25s,
         ${moveUp} 0.8s ease-in 2.5s forwards,
         ${hideM} 0s linear 3.25s forwards;
@@ -241,8 +241,8 @@ export const Items = styled.svg`
   }
   &:nth-child(9) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(-135deg);
-      animation:
+      -webkit-transform: rotate(-135deg);
+      -webkit-animation:
         ${rotate03} 1.25s linear 1.25s,
         ${moveLeftUp} 0.8s ease-in 2.5s forwards,
         ${hideM} 0s linear 3.25s forwards;
@@ -257,11 +257,11 @@ export const Arquitetura30 = styled.svg`
   visibility: hidden;
   height: calc(0.819 * ${elementHeight});
   @media all and (-webkit-min-device-pixel-ratio: 0) {
-    animation: ${show30arquitetura} 0s linear 3.25s forwards;
+    -webkit-animation: ${show30arquitetura} 0s linear 3.25s forwards;
   }
   path {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      animation: ${changeLogoColor} 0.2s linear 4.25s forwards;
+      -webkit-animation: ${changeLogoColor} 0.2s linear 4.25s forwards;
     }
   }
 `
@@ -288,7 +288,7 @@ export const Msg = styled.p`
   text-align: center;
   top: calc(50% - 15px);
   @media all and (-webkit-min-device-pixel-ratio: 0) {
-    animation: ${showSocials} 0s linear 4.5s forwards;
+    -webkit-animation: ${showSocials} 0s linear 4.5s forwards;
   }
 `
 
@@ -303,7 +303,7 @@ export const Footer = styled.footer`
   flex-direction: column;
   justify-content: center;
   @media all and (-webkit-min-device-pixel-ratio: 0) {
-    animation: ${showSocials} 0s linear 4.25s forwards;
+    -webkit-animation: ${showSocials} 0s linear 4.25s forwards;
   }
 `
 
@@ -336,7 +336,7 @@ export const Brackground = styled.div`
   background: #f3f3f3;
   clip-path: inset(100% 0 0 0);
   @media all and (-webkit-min-device-pixel-ratio: 0) {
-    animation: ${changeBackground} 1s cubic-bezier(0.77, 0, 0.175, 1) 4s
+    -webkit-animation: ${changeBackground} 1s cubic-bezier(0.77, 0, 0.175, 1) 4s
       forwards;
   }
 `
