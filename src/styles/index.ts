@@ -148,9 +148,9 @@ export const Container = styled.div`
   display: grid;
   visibility: hidden;
   @media all and (-webkit-min-device-pixel-ratio: 0) {
-  animation:
-    ${showContainer} 0s linear 1.25s forwards,
-    ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 4.15s forwards;
+    animation:
+      ${showContainer} 0s linear 1.25s forwards,
+      ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 4.15s forwards;
   }
   position: relative;
   align-items: center;
@@ -166,13 +166,13 @@ export const Items = styled.svg`
   path {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
       animation:
-        ${changeColor} 0s forwards 3.25s,
+        //${changeColor} 0s forwards 3.25s,
         ${changeLogoColor} 0.2s linear 4.25s forwards;
     }
   }
   &:nth-child(1) {
-    transform: rotate(-135deg);
     @media all and (-webkit-min-device-pixel-ratio: 0) {
+      transform: rotate(-135deg);
       animation:
         ${rotate03} 1.25s linear 1.25s,
         ${moveRightDown} 0.8s ease-in 2.5s forwards,
@@ -180,8 +180,8 @@ export const Items = styled.svg`
     }
   }
   &:nth-child(2) {
-    transform: rotate(135deg);
     @media all and (-webkit-min-device-pixel-ratio: 0) {
+      transform: rotate(135deg);
       animation:
         ${rotate01} 1.25s linear 1.25s,
         ${moveDown} 0.8s ease-in 2.5s forwards,
@@ -189,8 +189,8 @@ export const Items = styled.svg`
     }
   }
   &:nth-child(3) {
-    transform: rotate(-135deg);
     @media all and (-webkit-min-device-pixel-ratio: 0) {
+      transform: rotate(-135deg);
       animation:
         ${rotate03} 1.25s linear 1.25s,
         ${moveLeftDown} 0.8s ease-in 2.5s forwards,
@@ -198,8 +198,8 @@ export const Items = styled.svg`
     }
   }
   &:nth-child(4) {
-    transform: rotate(-90deg);
     @media all and (-webkit-min-device-pixel-ratio: 0) {
+      transform: rotate(-90deg);
       animation:
         ${rotate02} 1.25s linear 1.25s,
         ${moveRight} 0.8s ease-in 2.5s forwards,
@@ -208,12 +208,14 @@ export const Items = styled.svg`
   }
   &:nth-child(5) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      animation: ${alignLogo} 0.75s linear 3.25s forwards;
+      animation:
+        ${changeColor} 0s forwards 3.25s,
+        ${alignLogo} 0.75s linear 3.25s forwards;
     }
   }
   &:nth-child(6) {
-    transform: rotate(-90deg);
     @media all and (-webkit-min-device-pixel-ratio: 0) {
+      transform: rotate(-90deg);
       animation:
         ${rotate02} 1.25s linear 1.25s,
         ${moveLeft} 0.8s ease-in 2.5s forwards,
@@ -221,8 +223,8 @@ export const Items = styled.svg`
     }
   }
   &:nth-child(7) {
-    transform: rotate(-135deg);
     @media all and (-webkit-min-device-pixel-ratio: 0) {
+      transform: rotate(-135deg);
       animation:
         ${rotate03} 1.25s linear 1.25s,
         ${moveRightUp} 0.8s ease-in 2.5s forwards,
@@ -230,8 +232,8 @@ export const Items = styled.svg`
     }
   }
   &:nth-child(8) {
-    transform: rotate(135deg);
     @media all and (-webkit-min-device-pixel-ratio: 0) {
+      transform: rotate(135deg);
       animation:
         ${rotate01} 1.25s linear 1.25s,
         ${moveUp} 0.8s ease-in 2.5s forwards,
@@ -239,8 +241,8 @@ export const Items = styled.svg`
     }
   }
   &:nth-child(9) {
-    transform: rotate(-135deg);
     @media all and (-webkit-min-device-pixel-ratio: 0) {
+      transform: rotate(-135deg);
       animation:
         ${rotate03} 1.25s linear 1.25s,
         ${moveLeftUp} 0.8s ease-in 2.5s forwards,
