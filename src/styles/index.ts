@@ -120,7 +120,7 @@ const changeBackground = keyframes`
 `
 const changeColor = keyframes`
   to {
-    fill: #F3F3F3;
+    fill: #fff;
   }
 `
 const changeLogoColor = keyframes`
@@ -270,7 +270,7 @@ export const Home = styled.section`
   width: 100vw;
   display: flex;
   height: 100dvh;
-  color: #f3f3f3;
+  color: #fff;
   background: #1d1d1f;
   align-items: center;
   flex-direction: column;
@@ -333,7 +333,7 @@ export const Brackground = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-  background: #f3f3f3;
+  background: #fff;
   clip-path: inset(100% 0 0 0);
   @media all and (-webkit-min-device-pixel-ratio: 0) {
     -webkit-animation: ${changeBackground} 1s cubic-bezier(0.77, 0, 0.175, 1) 4s
