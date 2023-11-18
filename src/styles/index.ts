@@ -167,7 +167,7 @@ export const Items = styled.svg`
     @media all and (-webkit-min-device-pixel-ratio: 0) {
       -webkit-animation:
         ${changeColor} 0s forwards 3.25s,
-        ${changeLogoColor} 0s linear 4.9s forwards;
+        ${changeLogoColor} 0s linear 4.8s forwards;
     }
   }
   &:nth-child(1) {
@@ -261,7 +261,7 @@ export const Arquitetura30 = styled.svg`
   }
   path {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-animation: ${changeLogoColor} 0s linear 4.9s forwards;
+      -webkit-animation: ${changeLogoColor} 0s linear 4.8s forwards;
     }
   }
 `
