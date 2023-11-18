@@ -308,7 +308,7 @@ export const Footer = styled.footer`
 `
 
 export const Socials = styled.div`
-  gap: 25px;
+  gap: 16px;
   display: flex;
   flex-direction: row;
 
@@ -318,7 +318,8 @@ export const Socials = styled.div`
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
+    padding: 8px;
+    box-sizing: initial;
   }
 `
 
