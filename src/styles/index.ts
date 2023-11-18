@@ -325,7 +325,7 @@ export const Socials = styled.div`
 export const Span = styled.span`
   color: #1d1d1f;
   font-size: 14px;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 8px;
 `
 
