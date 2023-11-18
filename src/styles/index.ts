@@ -281,7 +281,7 @@ export const Msg = styled.p`
   width: 100%;
   height: 30px;
   color: #1d1d1f;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
   visibility: hidden;
   position: absolute;
@@ -324,8 +324,8 @@ export const Socials = styled.div`
 
 export const Span = styled.span`
   color: #1d1d1f;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 100;
   margin-bottom: 8px;
 `
 
