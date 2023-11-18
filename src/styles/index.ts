@@ -150,7 +150,7 @@ export const Container = styled.div`
   @media all and (-webkit-min-device-pixel-ratio: 0) {
     -webkit-animation:
       ${showContainer} 0s linear 1.25s forwards,
-      ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 4.15s forwards;
+      ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 4.50s forwards;
   }
   position: relative;
   align-items: center;
@@ -167,7 +167,7 @@ export const Items = styled.svg`
     @media all and (-webkit-min-device-pixel-ratio: 0) {
       -webkit-animation:
         ${changeColor} 0s forwards 3.25s,
-        ${changeLogoColor} 0.2s linear 4.25s forwards;
+        ${changeLogoColor} 0.2s linear 5.2s forwards;
     }
   }
   &:nth-child(1) {
@@ -261,7 +261,7 @@ export const Arquitetura30 = styled.svg`
   }
   path {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-animation: ${changeLogoColor} 0.2s linear 4.25s forwards;
+      -webkit-animation: ${changeLogoColor} 0.2s linear 5.2s forwards;
     }
   }
 `
@@ -288,7 +288,7 @@ export const Msg = styled.p`
   text-align: center;
   top: calc(50% - 15px);
   @media all and (-webkit-min-device-pixel-ratio: 0) {
-    -webkit-animation: ${showSocials} 0s linear 4.5s forwards;
+    -webkit-animation: ${showSocials} 0s linear 4.85s forwards;
   }
 `
 
@@ -303,7 +303,7 @@ export const Footer = styled.footer`
   flex-direction: column;
   justify-content: center;
   @media all and (-webkit-min-device-pixel-ratio: 0) {
-    -webkit-animation: ${showSocials} 0s linear 4.25s forwards;
+    -webkit-animation: ${showSocials} 0s linear 4.50s forwards;
   }
 `
 
@@ -336,7 +336,7 @@ export const Brackground = styled.div`
   background: #fff;
   clip-path: inset(100% 0 0 0);
   @media all and (-webkit-min-device-pixel-ratio: 0) {
-    -webkit-animation: ${changeBackground} 1s cubic-bezier(0.77, 0, 0.175, 1) 4s
+    -webkit-animation: ${changeBackground} 2s cubic-bezier(0.77, 0, 0.175, 1) 4s
       forwards;
   }
 `
