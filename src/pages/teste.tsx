@@ -2,7 +2,7 @@ import * as S from '@/styles'
 
 export default function Teste() {
   return (
-    <>
+    <S.BodyTeste>
       <S.ItemsTeste
         viewBox="0 0 916 735"
         xmlns="http://www.w3.org/2000/svg"
@@ -15,6 +15,6 @@ export default function Teste() {
           stroke-linejoin="round"
         />
       </S.ItemsTeste>
-    </>
+    </S.BodyTeste>
   )
 }

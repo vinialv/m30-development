@@ -340,6 +340,14 @@ export const Brackground = styled.div`
   }
 `
 
+export const BodyTeste = styled.body`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 export const ItemsTeste = styled.svg`
 height: calc(0.65 * ${elementHeight});
 
