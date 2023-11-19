@@ -2,7 +2,7 @@ import Link from 'next/link'
 import * as S from '@/styles'
 import { WhatsappLogo, InstagramLogo, EnvelopeSimple } from 'phosphor-react'
 
-export default function Test() {
+export default function Index() {
   const numberElements = 9
 
   const elementsArray = Array.from({ length: numberElements }).map(
