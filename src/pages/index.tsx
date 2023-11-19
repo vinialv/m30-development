@@ -10,7 +10,6 @@ export default function Index() {
       <S.Items
         key={index}
         viewBox="0 0 916 735"
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

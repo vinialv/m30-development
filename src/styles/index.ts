@@ -130,6 +130,12 @@ const changeLogoColor = keyframes`
   }
 `
 
+const changeLogoColorTeste = keyframes`
+  to {
+    fill: #1D1D1F;
+  }
+`
+
 const moveUpLogo = keyframes`
   from {
     -webkit-transform: translateY(0);
@@ -340,11 +346,7 @@ export const Brackground = styled.div`
   }
 `
 //--------------------------------------------------------------
-const changeLogoColorTeste = keyframes`
-  to {
-    fill: #1D1D1F;
-  }
-`
+
 
 export const BodyTeste = styled.body`
   height: 100vh;
