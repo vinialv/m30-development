@@ -339,6 +339,12 @@ export const Brackground = styled.div`
       4s forwards;
   }
 `
+//--------------------------------------------------------------
+const changeLogoColorTeste = keyframes`
+  to {
+    fill: #1D1D1F;
+  }
+`
 
 export const BodyTeste = styled.body`
   height: 100vh;
@@ -357,3 +363,5 @@ path {
   }
 }
 `
+
+//--------------------------------------------------------------
