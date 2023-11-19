@@ -208,8 +208,7 @@ export const Items = styled.svg`
   }
   &:nth-child(5) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-animation:
-        ${alignLogo} 0.75s linear 3.25s forwards;
+      -webkit-animation: ${alignLogo} 0.75s linear 3.25s forwards;
     }
   }
   &:nth-child(6) {
@@ -336,7 +335,17 @@ export const Brackground = styled.div`
   background: #fff;
   clip-path: inset(100% 0 0 0);
   @media all and (-webkit-min-device-pixel-ratio: 0) {
-    -webkit-animation: ${changeBackground} 1.5s cubic-bezier(0.77, 0, 0.175, 1) 4s
-      forwards;
+    -webkit-animation: ${changeBackground} 1.5s cubic-bezier(0.77, 0, 0.175, 1)
+      4s forwards;
   }
+`
+
+export const ItemsTeste = styled.svg`
+height: calc(0.65 * ${elementHeight});
+
+path {
+  @media all {
+    -webkit-animation: ${changeLogoColor} 1s linear 2s forwards;
+  }
+}
 `
