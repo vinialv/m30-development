@@ -135,7 +135,7 @@ const moveUpLogo = keyframes`
     -webkit-transform: translateY(0);
   }
   to {
-    -webkit-transform: translateY(calc(-40dvh));
+    -webkit-transform: translateY(calc(-40vh));
   }
 `
 const showSocials = keyframes`
@@ -269,7 +269,7 @@ export const Arquitetura30 = styled.svg`
 export const Home = styled.section`
   width: 100vw;
   display: flex;
-  height: 100dvh;
+  height: 100vh;
   color: #fff;
   background: #1d1d1f;
   align-items: center;
