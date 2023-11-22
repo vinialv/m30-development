@@ -13,9 +13,14 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-
+  
   body {
-    font-family: 'Mukta', sans-serif;
+    font-family: 'Lora', sans-serif;
+    height: 100dvh;
+  }
+
+  #__next {
+    height: 100%;
   }
   
 `

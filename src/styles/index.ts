@@ -141,7 +141,7 @@ const moveUpLogo = keyframes`
     -webkit-transform: translateY(0);
   }
   to {
-    -webkit-transform: translateY(calc(-40vh));
+    -webkit-transform: translateY(-100%);
   }
 `
 const showSocials = keyframes`
@@ -274,7 +274,7 @@ export const Arquitetura30 = styled.svg`
 export const Home = styled.section`
   width: 100vw;
   display: flex;
-  height: 100vh;
+  height: 100%;
   color: #fff;
   background: #1d1d1f;
   align-items: center;
@@ -282,12 +282,12 @@ export const Home = styled.section`
   justify-content: center;
 `
 
-export const Msg = styled.p`
-  width: 100%;
-  height: 30px;
+export const Logo = styled.img
+
+export const Main = styled.p`
   color: #1d1d1f;
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 32px;
+  font-weight: 400;
   visibility: hidden;
   position: absolute;
   text-align: center;
@@ -330,8 +330,8 @@ export const Socials = styled.div`
 
 export const Span = styled.span`
   color: #1d1d1f;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
 `
 
 export const Brackground = styled.div`
