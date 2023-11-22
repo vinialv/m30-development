@@ -14,6 +14,7 @@ export const Home = styled.section`
   
   main {
     font-size: 28px;
+    text-align: center;
 
     @media (max-width: 768px) {
       font-size: 18px;
