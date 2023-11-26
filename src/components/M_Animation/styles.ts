@@ -166,7 +166,8 @@ export const Items = styled.svg`
   }
   &:nth-child(5) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-animation: ${alignLogo} 0.75s linear 3.25s forwards;
+      -webkit-animation: ${alignLogo} 0.75s linear 3.25s forwards, ${changeColor} 0s forwards 3.25s;
+      ;
     }
   }
   &:nth-child(6) {
