@@ -170,8 +170,8 @@ export const Items = styled.svg`
     animation: ${alignLogo} 0.75s linear 3.25s forwards;
     -webkit-animation: ${alignLogo} 0.75s linear 3.25s forwards;
     path {
-      animation: ${changeColor} 0s forwards 3.25s;
-      -webkit-animation: ${changeColor} 0s forwards 3.25s;
+      animation: ${changeColor} 1s forwards 3.25s;
+      -webkit-animation: ${changeColor} 1s forwards 3.25s;
     }
   }
   &:nth-child(6) {
