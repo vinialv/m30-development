@@ -122,12 +122,6 @@ export const Container = styled.div`
 export const Items = styled.svg`
   height: calc(0.65 * ${elementHeight});
 
-  path {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-animation:
-        ${changeColor} 0s forwards 3.25s
-    }
-  }
   &:nth-child(1) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
       transform: rotate(-135deg);
@@ -166,8 +160,12 @@ export const Items = styled.svg`
   }
   &:nth-child(5) {
     @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-animation: ${alignLogo} 0.75s linear 3.25s forwards, ${changeColor} 0s forwards 3.25s;
-      ;
+      -webkit-animation: ${alignLogo} 0.75s linear 3.25s forwards;
+    }
+    path {
+      @media all and (-webkit-min-device-pixel-ratio: 0) {
+        -webkit-animation: ${changeColor} 0s forwards 3.25s;
+      }
     }
   }
   &:nth-child(6) {
