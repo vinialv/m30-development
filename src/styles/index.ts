@@ -367,3 +367,12 @@ path {
 `
 
 //--------------------------------------------------------------
+
+export const BackgroundTeste = styled.div`
+  width: 100%;
+  display: flex;
+  height: 100dvh;
+  background: #1d1d1f;
+  align-items: center;
+  justify-content: center;
+`
