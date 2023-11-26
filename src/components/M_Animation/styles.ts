@@ -123,85 +123,99 @@ export const Items = styled.svg`
   height: calc(0.65 * ${elementHeight});
 
   &:nth-child(1) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(-135deg);
-      -webkit-animation:
-        ${rotate03} 1.25s linear 1.25s,
-        ${moveRightDown} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
+    transform: rotate(-135deg);
+    animation:
+      ${rotate03} 1.25s linear 1.25s,
+      ${moveRightDown} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
+    -webkit-animation:
+      ${rotate03} 1.25s linear 1.25s,
+      ${moveRightDown} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
   }
   &:nth-child(2) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(135deg);
-      -webkit-animation:
-        ${rotate01} 1.25s linear 1.25s,
-        ${moveDown} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
+    transform: rotate(135deg);
+    animation:
+      ${rotate01} 1.25s linear 1.25s,
+      ${moveDown} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
+    -webkit-animation:
+      ${rotate01} 1.25s linear 1.25s,
+      ${moveDown} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
   }
   &:nth-child(3) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(-135deg);
-      -webkit-animation:
-        ${rotate03} 1.25s linear 1.25s,
-        ${moveLeftDown} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
+    transform: rotate(-135deg);
+    animation:
+      ${rotate03} 1.25s linear 1.25s,
+      ${moveLeftDown} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
+    -webkit-animation:
+      ${rotate03} 1.25s linear 1.25s,
+      ${moveLeftDown} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
   }
   &:nth-child(4) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(-90deg);
-      -webkit-animation:
-        ${rotate02} 1.25s linear 1.25s,
-        ${moveRight} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
+    transform: rotate(-90deg);
+    animation:
+      ${rotate02} 1.25s linear 1.25s,
+      ${moveRight} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
+    -webkit-animation:
+      ${rotate02} 1.25s linear 1.25s,
+      ${moveRight} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
   }
   &:nth-child(5) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-animation: ${alignLogo} 0.75s linear 3.25s forwards;
-    }
+    animation: ${alignLogo} 0.75s linear 3.25s forwards;
+    -webkit-animation: ${alignLogo} 0.75s linear 3.25s forwards;
     path {
-      @media all and (-webkit-min-device-pixel-ratio: 0) {
-        -webkit-animation: ${changeColor} 0s forwards 3.25s;
-      }
+      animation: ${changeColor} 0s forwards 3.25s;
+      -webkit-animation: ${changeColor} 0s forwards 3.25s;
     }
   }
   &:nth-child(6) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(-90deg);
-      -webkit-animation:
-        ${rotate02} 1.25s linear 1.25s,
-        ${moveLeft} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
+    transform: rotate(-90deg);
+    animation:
+      ${rotate02} 1.25s linear 1.25s,
+      ${moveLeft} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
+    -webkit-animation:
+      ${rotate02} 1.25s linear 1.25s,
+      ${moveLeft} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
   }
   &:nth-child(7) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(-135deg);
-      -webkit-animation:
-        ${rotate03} 1.25s linear 1.25s,
-        ${moveRightUp} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
+    transform: rotate(-135deg);
+    animation:
+      ${rotate03} 1.25s linear 1.25s,
+      ${moveRightUp} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
+    -webkit-animation:
+      ${rotate03} 1.25s linear 1.25s,
+      ${moveRightUp} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
   }
   &:nth-child(8) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(135deg);
-      -webkit-animation:
-        ${rotate01} 1.25s linear 1.25s,
-        ${moveUp} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
+    transform: rotate(135deg);
+    animation:
+      ${rotate01} 1.25s linear 1.25s,
+      ${moveUp} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
+    -webkit-animation:
+      ${rotate01} 1.25s linear 1.25s,
+      ${moveUp} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
   }
   &:nth-child(9) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      transform: rotate(-135deg);
-      -webkit-animation:
-        ${rotate03} 1.25s linear 1.25s,
-        ${moveLeftUp} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
+    transform: rotate(-135deg);
+    animation:
+      ${rotate03} 1.25s linear 1.25s,
+      ${moveLeftUp} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
+    -webkit-animation:
+      ${rotate03} 1.25s linear 1.25s,
+      ${moveLeftUp} 0.8s ease-in 2.5s forwards,
+      ${hideM} 0s linear 3.25s forwards;
   }
 `
