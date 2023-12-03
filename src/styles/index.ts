@@ -368,11 +368,17 @@ path {
 
 //--------------------------------------------------------------
 
-export const BackgroundTeste = styled.div`
+export const BGSplashScreen = styled.div`
   width: 100%;
   display: flex;
   height: 100dvh;
   background: #1d1d1f;
   align-items: center;
   justify-content: center;
+`
+
+export const LogoSplashSreen = styled.svg`
+display: flex;
+height: 100px;
+margin-top: 35px;
 `
