@@ -25,7 +25,6 @@ export default function Teste() {
   }, [])
 
   return (
-    
     <S.Home>
       <S.Brackground />
       <header>
