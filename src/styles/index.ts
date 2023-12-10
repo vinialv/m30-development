@@ -35,7 +35,7 @@ export const Home = styled.section<HomeProps>`
 
   header {
     width: 100%;
-    height: 116.89px;
+    height: 120px;
     display: ${(props) => (props.splashScreen ? 'none' : 'flex')};
   }
 
@@ -74,19 +74,23 @@ export const Home = styled.section<HomeProps>`
   }
 
   footer {
+    width: 100%;
     color: #1d1d1f;
     display: flex;
+    height: 120px;
     position: relative;
     visibility: hidden;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     animation: ${showContent} 0s linear 0.20s forwards;
     -webkit-animation: ${showContent} 0s linear 0.20s forwards;
     display: ${(props) => (props.splashScreen ? 'none' : 'flex')};
 
     p {
+      width: 100%;
       font-size: 16px;
+      text-align: center;
 
       @media (max-width: 768px) {
         font-size: 14px;
@@ -95,8 +99,9 @@ export const Home = styled.section<HomeProps>`
 
     nav {
       gap: 16px;
-      color: #1d1d1f;
+      width: 100%;
       display: flex;
+      color: #1d1d1f;
       margin: 4px 0 16px 0;
       justify-content: center;
 
