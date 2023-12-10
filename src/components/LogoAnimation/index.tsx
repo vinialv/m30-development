@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 
 import M_SVG from '../M_SVG'
 import Arquitetura30SVG from '../Arquitetura30SVG'
@@ -20,23 +20,13 @@ export function LogoAnimation() {
     )
   )
 
-  useEffect(() => {
-    const tempoInicial = new Date().getTime()
-
+  useLayoutEffect(() => {
     const changeM_Color = setTimeout(() => {
       setLogoColor(true)
     }, 3250)
 
     return () => {
-      const tempoFinal = new Date().getTime()
-      const tempoTotal = tempoFinal - tempoInicial
-
-      const tempoRestante = Math.max(0, 3250 - tempoTotal)
-
       clearTimeout(changeM_Color)
-      setTimeout(() => {
-        setLogoColor(true)
-      }, tempoRestante)
     }
   }, [])
 
