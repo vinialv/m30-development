@@ -1,4 +1,8 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
+
+type LogoProps = {
+  startAnimation: boolean
+}
 
 const elementHeight = '100px'
 
@@ -8,7 +12,7 @@ const showContainer = keyframes`
   }
 `
 
-export const Container = styled.div`
+export const Container = styled.div<LogoProps>`
   display: grid;
   margin-bottom: 16px;
   visibility: hidden;
@@ -18,6 +22,11 @@ export const Container = styled.div`
   width: calc(3 * ${elementHeight});
   height: calc(3 * ${elementHeight});
   grid-template-columns: repeat(3, 1fr);
-  animation: ${showContainer} 0s linear 1.25s forwards;
-  -webkit-animation: ${showContainer} 0s linear 1.25s forwards;
+  ${(props) =>
+    props.startAnimation
+      ? css`
+          animation: ${showContainer} 0s linear 1.25s forwards;
+          -webkit-animation: ${showContainer} 0s linear 1.25s forwards;
+        `
+      : ''};
 `
