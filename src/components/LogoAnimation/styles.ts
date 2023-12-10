@@ -10,7 +10,7 @@ const showContainer = keyframes`
 
 export const Container = styled.div`
   display: grid;
-  margin-bottom: 16px;
+  margin-bottom: 17.5px;
   visibility: hidden;
   position: relative;
   align-items: center;
