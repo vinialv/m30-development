@@ -35,7 +35,7 @@ export const Home = styled.section<HomeProps>`
 
   header {
     width: 100%;
-    height: 120px;
+    height: 117px;
     display: ${(props) => (props.splashScreen ? 'none' : 'flex')};
   }
 
@@ -77,7 +77,6 @@ export const Home = styled.section<HomeProps>`
     width: 100%;
     color: #1d1d1f;
     display: flex;
-    height: 120px;
     position: relative;
     visibility: hidden;
     align-items: center;
