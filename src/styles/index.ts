@@ -1,384 +1,131 @@
 import styled, { keyframes } from 'styled-components'
 
-const elementHeight = '100px'
+type HomeProps = {
+  splashScreen: boolean
+}
 
-// Animações para rotação do elemento
-const rotate01 = keyframes`
+const showContent = keyframes`
   to {
-    -webkit-transform: rotate(360deg);
-  }
-`
-const rotate02 = keyframes`
-  to {
-    -webkit-transform: rotate(360deg)
-  }
-`
-const rotate03 = keyframes`
-  to {
-    -webkit-transform: rotate(-360deg);
+    visibility: visible;
   }
 `
 
-// Animações para movimentar o elemento ao centro da GRID
-const moveRightDown = keyframes`
-  from {
-    -webkit-transform: translateX(0) translateY(0);
-  }
+const moveUpLogo = keyframes`
   to {
-    -webkit-transform: translateX(${elementHeight}) translateY(${elementHeight});
-  }
-`
-const moveRightUp = keyframes`
-  from {
-    -webkit-transform: translateX(0) translateY(0);
-  }
-  to {
-    -webkit-transform: translateX(${elementHeight}) translateY(-${elementHeight});
-  }
-`
-const moveRight = keyframes`
-  from {
-    -webkit-transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(${elementHeight});
+    top: 32px;
   }
 `
 
-const moveLeftDown = keyframes`
-  from {
-    -webkit-transform: translateX(0) translateY(0);
-  }
+const changeLogoColor = keyframes`
   to {
-    -webkit-transform: translateX(-${elementHeight}) translateY(${elementHeight});
-  }
-`
-const moveLeftUp = keyframes`
-  from {
-    -webkit-transform: translateX(0) translateY(0);
-  }
-  to {
-    -webkit-transform: translateX(-${elementHeight}) translateY(-${elementHeight});
-  }
-`
-const moveLeft = keyframes`
-  from {
-    -webkit-transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-${elementHeight});
+    fill: #1d1d1f;
   }
 `
 
-const moveDown = keyframes`
-  from {
-    -webkit-transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(${elementHeight});
-  }
-`
-const moveUp = keyframes`
-  from {
-    -webkit-transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(-${elementHeight});
-  }
-`
+export const Home = styled.section<HomeProps>`
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  position: relative;
+  background: #1d1d1f;
+  align-items: center;
+  flex-direction: column;
+  justify-content: ${(props) => (props.splashScreen ? 'center' : 'space-between')};
 
-// Animação para alinhar o "M" para entrar o "30" e ambos ficarem alinhado ao centro
-const alignLogo = keyframes`
-  from {
-    -webkit-transform: translateX(0);
+  header {
+    width: 100%;
+    height: 116.89px;
+    display: ${(props) => (props.splashScreen ? 'none' : 'flex')};
   }
-  to {
-    -webkit-transform: translateX(calc(0.44 * -${parseInt(elementHeight)}px));
-  }
-`
-const hideM = keyframes`
-  to {
+
+  header svg {
+    position: absolute;
     visibility: hidden;
+    top: calc(50% - 40.945px);
+    right: calc(50% - 85.055px);
+    animation:
+      ${showContent} 0s linear 0s forwards,
+      ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 0.35s forwards;
+    -webkit-animation:
+      ${showContent} 0s linear 0s forwards,
+      ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 0.35s forwards;
   }
-`
-const showContainer = keyframes`
-  to {
-    visibility: visible;
+
+  header svg path {
+    animation: ${changeLogoColor} 0.15s linear 0.50s forwards;
+    -webkit-animation: ${changeLogoColor} 0.15s linear 0.50s forwards;
   }
-`
-const show30arquitetura = keyframes`
-  to {
-    visibility: visible;
+
+  main {
+    color: #1d1d1f;
+    font-size: 22px;
+    font-weight: 300;
+    visibility: hidden;
+    position: relative;
+    text-align: center;
+    animation: ${showContent} 0s linear 0.75s forwards;
+    -webkit-animation: ${showContent} 0s linear 0.75s forwards;
+    display: ${(props) => (props.splashScreen ? 'none' : 'flex')};
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  footer {
+    color: #1d1d1f;
+    display: flex;
+    position: relative;
+    visibility: hidden;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    animation: ${showContent} 0s linear 0.20s forwards;
+    -webkit-animation: ${showContent} 0s linear 0.20s forwards;
+    display: ${(props) => (props.splashScreen ? 'none' : 'flex')};
+
+    p {
+      font-size: 16px;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+
+    nav {
+      gap: 16px;
+      color: #1d1d1f;
+      display: flex;
+      margin: 4px 0 16px 0;
+      justify-content: center;
+
+      a {
+        padding: 8px;
+        display: flex;
+      }
+
+      a svg {
+        color: #1d1d1f;
+      }
+    }
   }
 `
 
-// Alteração de cores
 const changeBackground = keyframes`
   to {
     clip-path: inset(0% 0 0 0);
   }
 `
-const changeColor = keyframes`
-  to {
-    fill: #fff;
-  }
-`
-const changeLogoColor = keyframes`
-  to {
-    fill: #1D1D1F;
-    stroke: #1D1D1F;
-  }
-`
 
-const changeLogoColorTeste = keyframes`
-  to {
-    fill: #1D1D1F;
-  }
-`
-
-const moveUpLogo = keyframes`
-  from {
-    -webkit-transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(-100%);
-  }
-`
-const showSocials = keyframes`
-  to {
-    visibility: visible;
-  }
-`
-
-export const Container = styled.div`
-  display: grid;
-  visibility: hidden;
-  @media all and (-webkit-min-device-pixel-ratio: 0) {
-    -webkit-animation:
-      ${showContainer} 0s linear 1.25s forwards,
-      ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 4.35s forwards;
-  }
-  position: relative;
-  align-items: center;
-  justify-items: center;
-  width: calc(3 * ${elementHeight});
-  height: calc(3 * ${elementHeight});
-  grid-template-columns: repeat(3, 1fr);
-`
-
-export const Items = styled.svg`
-  height: calc(0.65 * ${elementHeight});
-
-  path {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-animation:
-        ${changeColor} 0s forwards 3.25s,
-        ${changeLogoColor} 0s linear 4.8s forwards;
-    }
-  }
-  &:nth-child(1) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-transform: rotate(-135deg);
-      -webkit-animation:
-        ${rotate03} 1.25s linear 1.25s,
-        ${moveRightDown} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
-  }
-  &:nth-child(2) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-transform: rotate(135deg);
-      -webkit-animation:
-        ${rotate01} 1.25s linear 1.25s,
-        ${moveDown} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
-  }
-  &:nth-child(3) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-transform: rotate(-135deg);
-      -webkit-animation:
-        ${rotate03} 1.25s linear 1.25s,
-        ${moveLeftDown} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
-  }
-  &:nth-child(4) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-transform: rotate(-90deg);
-      -webkit-animation:
-        ${rotate02} 1.25s linear 1.25s,
-        ${moveRight} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
-  }
-  &:nth-child(5) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-animation: ${alignLogo} 0.75s linear 3.25s forwards;
-    }
-  }
-  &:nth-child(6) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-transform: rotate(-90deg);
-      -webkit-animation:
-        ${rotate02} 1.25s linear 1.25s,
-        ${moveLeft} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
-  }
-  &:nth-child(7) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-transform: rotate(-135deg);
-      -webkit-animation:
-        ${rotate03} 1.25s linear 1.25s,
-        ${moveRightUp} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
-  }
-  &:nth-child(8) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-transform: rotate(135deg);
-      -webkit-animation:
-        ${rotate01} 1.25s linear 1.25s,
-        ${moveUp} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
-  }
-  &:nth-child(9) {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-transform: rotate(-135deg);
-      -webkit-animation:
-        ${rotate03} 1.25s linear 1.25s,
-        ${moveLeftUp} 0.8s ease-in 2.5s forwards,
-        ${hideM} 0s linear 3.25s forwards;
-    }
-  }
-`
-
-export const Arquitetura30 = styled.svg`
-  right: 22%;
-  top: 39.25%;
-  position: absolute;
-  visibility: hidden;
-  height: calc(0.819 * ${elementHeight});
-  @media all and (-webkit-min-device-pixel-ratio: 0) {
-    -webkit-animation: ${show30arquitetura} 0s linear 3.25s forwards;
-  }
-  path {
-    @media all and (-webkit-min-device-pixel-ratio: 0) {
-      -webkit-animation: ${changeLogoColor} 0s linear 4.8s forwards;
-    }
-  }
-`
-
-export const Home = styled.section`
-  width: 100vw;
-  display: flex;
-  height: 100%;
-  color: #fff;
-  background: #1d1d1f;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-`
-
-export const Logo = styled.img
-
-export const Main = styled.p`
-  color: #1d1d1f;
-  font-size: 32px;
-  font-weight: 400;
-  visibility: hidden;
-  position: absolute;
-  text-align: center;
-  top: calc(50% - 15px);
-  @media all and (-webkit-min-device-pixel-ratio: 0) {
-    -webkit-animation: ${showSocials} 0s linear 4.75s forwards;
-  }
-`
-
-export const Footer = styled.footer`
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  visibility: hidden;
-  position: absolute;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  @media all and (-webkit-min-device-pixel-ratio: 0) {
-    -webkit-animation: ${showSocials} 0s linear 4.35s forwards;
-  }
-`
-
-export const Socials = styled.div`
-  gap: 16px;
-  display: flex;
-  flex-direction: row;
-
-  a svg {
-    display: flex;
-    color: #1d1d1f;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    box-sizing: initial;
-  }
-`
-
-export const Span = styled.span`
-  color: #1d1d1f;
-  font-size: 16px;
-  font-weight: 400;
-`
-
-export const Brackground = styled.div`
+export const Background = styled.section`
   width: 100%;
   height: 100%;
-  position: absolute;
   background: #fff;
+  position: absolute;
   clip-path: inset(100% 0 0 0);
-  @media all and (-webkit-min-device-pixel-ratio: 0) {
-    -webkit-animation: ${changeBackground} 1.5s cubic-bezier(0.77, 0, 0.175, 1)
-      4s forwards;
-  }
-`
-//--------------------------------------------------------------
-
-
-export const BodyTeste = styled.body`
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-export const ItemsTeste = styled.svg`
-height: calc(0.65 * ${elementHeight});
-
-path {
-  @media all {
-    -webkit-animation: ${changeLogoColor} 1s linear 2s forwards;
-  }
-}
-`
-
-//--------------------------------------------------------------
-
-export const BGSplashScreen = styled.div`
-  width: 100%;
-  display: flex;
-  height: 100dvh;
-  background: #1d1d1f;
-  align-items: center;
-  justify-content: center;
-`
-
-export const LogoSplashSreen = styled.svg`
-display: flex;
-height: 100px;
-margin-top: 35px;
+  animation: ${changeBackground} 1.5s cubic-bezier(0.77, 0, 0.175, 1) 4s
+    forwards;
+  -webkit-animation: ${changeBackground} 1.5s cubic-bezier(0.77, 0, 0.175, 1) 4s
+    forwards;
 `

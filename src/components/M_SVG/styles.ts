@@ -1,149 +1,105 @@
 import styled, { keyframes } from 'styled-components'
 
-type HeaderProps = {
-  changeLogo: boolean
-}
-
 const elementHeight = '100px'
 
 // Animações para rotação do elemento
 const rotate01 = keyframes`
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
   }
 `
 const rotate02 = keyframes`
   to {
-    transform: rotate(360deg)
+    -webkit-transform: rotate(360deg)
   }
 `
 const rotate03 = keyframes`
   to {
-    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
   }
 `
 
 // Animações para movimentar o elemento ao centro da GRID
 const moveRightDown = keyframes`
   from {
-    transform: translateX(0) translateY(0);
+    -webkit-transform: translateX(0) translateY(0);
   }
   to {
-    transform: translateX(${elementHeight}) translateY(${elementHeight});
+    -webkit-transform: translateX(${elementHeight}) translateY(${elementHeight});
   }
 `
 const moveRightUp = keyframes`
   from {
-    transform: translateX(0) translateY(0);
+    -webkit-transform: translateX(0) translateY(0);
   }
   to {
-    transform: translateX(${elementHeight}) translateY(-${elementHeight});
+    -webkit-transform: translateX(${elementHeight}) translateY(-${elementHeight});
   }
 `
 const moveRight = keyframes`
   from {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
   to {
-    transform: translateX(${elementHeight});
+    -webkit-transform: translateX(${elementHeight});
   }
 `
+
 const moveLeftDown = keyframes`
   from {
-    transform: translateX(0) translateY(0);
+    -webkit-transform: translateX(0) translateY(0);
   }
   to {
-    transform: translateX(-${elementHeight}) translateY(${elementHeight});
+    -webkit-transform: translateX(-${elementHeight}) translateY(${elementHeight});
   }
 `
 const moveLeftUp = keyframes`
   from {
-    transform: translateX(0) translateY(0);
+    -webkit-transform: translateX(0) translateY(0);
   }
   to {
-    transform: translateX(-${elementHeight}) translateY(-${elementHeight});
+    -webkit-transform: translateX(-${elementHeight}) translateY(-${elementHeight});
   }
 `
 const moveLeft = keyframes`
   from {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
   to {
-    transform: translateX(-${elementHeight});
+    -webkit-transform: translateX(-${elementHeight});
   }
 `
+
 const moveDown = keyframes`
   from {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
   }
   to {
-    transform: translateY(${elementHeight});
+    -webkit-transform: translateY(${elementHeight});
   }
 `
 const moveUp = keyframes`
   from {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
   }
   to {
-    transform: translateY(-${elementHeight});
+    -webkit-transform: translateY(-${elementHeight});
   }
 `
 
-// Animação para o M ir a esquerda para se alinhar com o "30 Arquitetura"
+// Animação para alinhar o "M" para entrar o "30" e ambos ficarem alinhado ao centro
 const alignLogo = keyframes`
   from {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
   to {
-    transform: translateX(calc(0.44 * -${parseInt(elementHeight)}px));
+    -webkit-transform: translateX(calc(0.44 * -${parseInt(elementHeight)}px));
   }
 `
-
-// Ocultar 8 M e deixar apenas o 5º visivel
 const hideM = keyframes`
   to {
     visibility: hidden;
   }
-`
-
-//Exibir animação
-const showContainer = keyframes`
-  to {
-    visibility: visible;
-  }
-`
-
-// Subir a logo ao topo da página
-const moveUpLogo = keyframes`
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-100%);
-  }
-`
-
-// Exibir o 30 Arquitetura
-const show30arquitetura = keyframes`
-  to {
-    visibility: visible;
-  }
-`
-
-export const Header = styled.header<HeaderProps>`
-  display: grid;
-  visibility: hidden;
-  align-items: center;
-  justify-content: center;
-  width: calc(3 * ${elementHeight});
-  height: calc(3 * ${elementHeight});
-  grid-template-columns: repeat(3, 1fr);
-  animation:
-    ${showContainer} 0s linear 1.25s forwards,
-    ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 4.35s forwards;
-  -webkit-animation:
-    ${showContainer} 0s linear 1.25s forwards,
-    ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 4.35s forwards;
 `
 
 export const Items = styled.svg`
@@ -241,14 +197,4 @@ export const Items = styled.svg`
       ${moveLeftUp} 0.8s linear 2.5s forwards,
       ${hideM} 0s linear 3.25s forwards;
   }
-`
-
-export const Arquitetura30 = styled.svg`
-  right: 22%;
-  top: 39.25%;
-  position: absolute;
-  visibility: hidden;
-  height: calc(0.819 * ${elementHeight});
-  animation: ${show30arquitetura} 0s linear 3.25s forwards;
-  -webkit-animation: ${show30arquitetura} 0s linear 3.25s forwards;
 `

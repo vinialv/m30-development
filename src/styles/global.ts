@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
   
   body {
     font-family: 'Lora', sans-serif;
+    height: 100vh;
     height: 100dvh;
   }
 
