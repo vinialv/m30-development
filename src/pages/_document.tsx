@@ -6,6 +6,8 @@ import Document, {
   DocumentContext
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -51,6 +53,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <SpeedInsights />
         </body>
       </Html>
     )
